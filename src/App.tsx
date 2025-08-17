@@ -4,6 +4,7 @@ import ErrorBoundary from '@/components/ErrorBoundary';
 import MaintenanceBanner from '@/components/MaintenanceBanner';
 import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
+import OnboardingProvider from '@/components/OnboardingModal';
 import { AuthProvider, useAuth } from '@/contexts/AuthContext';
 import { NotificationProvider } from '@/contexts/NotificationContext';
 
@@ -194,7 +195,8 @@ const App: React.FC = () => {
       <BrowserRouter>
         <AuthProvider>
           <NotificationProvider>
-            <Routes>
+            <OnboardingProvider>
+              <Routes>
               {/* Public routes */}
               <Route
                 path="/login"
@@ -353,6 +355,7 @@ const App: React.FC = () => {
               <Route path="/" element={<Navigate to="/dashboard" replace />} />
               <Route path="*" element={<Navigate to="/dashboard" replace />} />
             </Routes>
+            </OnboardingProvider>
           </NotificationProvider>
         </AuthProvider>
       </BrowserRouter>
