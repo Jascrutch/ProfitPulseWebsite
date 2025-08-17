@@ -1,1 +1,32 @@
-{"name":"profit-pulse-website","version":"1.0.0","private":true,"description":"Modern trading dashboard for Profit Pulse","scripts":{"dev":"vite","start":"vite","build":"vite build","preview":"vite preview"},"dependencies":{"react":"^18.2.0","react-dom":"^18.2.0","react-router-dom":"^6.21.1"},"devDependencies":{"@vitejs/plugin-react":"^4.0.4","vite":"^5.2.0"}}
+{
+  "name": "profit-pulse-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Modern trading dashboard for Profit Pulse with comprehensive features",
+  "scripts": {
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext .ts,.tsx",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.4",
+    "@types/node": "^20.10.0",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.2.0"
+  }
+}
