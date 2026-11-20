@@ -1,13 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profit Pulse</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Profit Pulse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#1F3A5F;--navy2:#16293f;--green:#2BA84A;--green-l:#8ff0a9;--green-d:#1F7F37;--ink:#15202B;--muted:#5A6572;--line:#E1E6EC;--warm:#F1EEEA;--maxw:1180px;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:var(--ink);line-height:1.6;background:#fff;-webkit-font-smoothing:antialiased;}
+  .serif{font-family:'Source Serif 4',Georgia,'Times New Roman',serif;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
+  a{text-decoration:none;color:inherit;}
+  .btn{display:inline-block;background:var(--green);color:#fff;font-weight:600;font-size:16px;padding:14px 28px;border-radius:2px;transition:background .18s;}
+  .btn:hover{background:var(--green-d);}
+  .btn.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35);}
+  .btn.ghost:hover{background:rgba(255,255,255,.08);}
+  .eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--green-d);}
+  .rulebar{width:46px;height:3px;background:var(--green);margin-bottom:22px;}
+
+  /* HERO */
+  .hero{background:var(--navy);color:#fff;}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding-top:72px;padding-bottom:78px;}
+  .hero .eyebrow{color:var(--green-l);}
+  .hero h1{font-size:60px;line-height:1.04;font-weight:600;letter-spacing:-.015em;margin:18px 0 0;}
+  .hero h1 em{font-style:italic;color:#bfe9c8;}
+  .hero p{font-size:20px;color:#c6d3e2;max-width:48ch;margin:24px 0 32px;}
+  .hero .actions{display:flex;gap:14px;flex-wrap:wrap;}
+  .hero .art{width:100%;height:auto;}
+
+  /* PROOF STRIP */
+  .proof{background:var(--navy2);color:#fff;}
+  .proof .wrap{display:grid;grid-template-columns:repeat(4,1fr);padding:0;}
+  .proof .cell{padding:26px 24px;border-right:1px solid #ffffff14;}
+  .proof .cell:last-child{border-right:none;}
+  .proof .num{font-size:28px;font-weight:600;color:#fff;}
+  .proof .lbl{font-size:13px;color:#9fb1c6;margin-top:3px;}
+
+  section{padding:84px 0;}
+  .section-alt{background:var(--warm);}
+  h2.big{font-size:40px;line-height:1.14;font-weight:600;letter-spacing:-.01em;color:var(--navy);max-width:22ch;}
+
+  /* OLD VS NEW */
+  .vs{display:grid;grid-template-columns:1fr 1fr;margin-top:44px;border:1px solid var(--line);}
+  .vs .col{padding:36px 34px;}
+  .vs .col.old{background:#fff;border-right:1px solid var(--line);}
+  .vs .col.neu{background:var(--navy);color:#fff;}
+  .vs h3{font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;margin-bottom:16px;}
+  .vs .old h3{color:var(--muted);}
+  .vs .neu h3{color:var(--green-l);}
+  .vs ul{list-style:none;}
+  .vs li{padding:11px 0;border-bottom:1px solid var(--line);font-size:16.5px;}
+  .vs .neu li{border-bottom:1px solid #ffffff1f;color:#dbe6f2;}
+  .vs li:last-child{border-bottom:none;}
+
+  /* SERVICES */
+  .svc{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;margin-top:46px;background:var(--line);border:1px solid var(--line);}
+  .svc .card{background:#fff;padding:38px 34px;}
+  .svc .card .k{font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--green-d);font-weight:700;}
+  .svc .card h3{font-size:25px;font-weight:600;color:var(--navy);margin:10px 0 12px;}
+  .svc .card p{color:var(--muted);font-size:16px;}
+  .svc .card .more{display:inline-block;margin-top:15px;color:var(--navy);font-weight:600;font-size:15px;border-bottom:2px solid var(--green);padding-bottom:2px;}
+
+  /* DEMO BAND */
+  .demo{background:var(--navy);color:#fff;}
+  .demo .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:52px;align-items:center;}
+  .demo h2{color:#fff;font-size:36px;font-weight:600;line-height:1.16;}
+  .demo p{color:#c6d3e2;font-size:17.5px;margin:16px 0 0;}
+  .demo .panel{background:#fff;border-radius:3px;padding:24px;color:var(--ink);}
+  .demo .panel .hd{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;}
+  .demo .panel .row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px;}
+  .demo .panel .row:last-child{border-bottom:none;}
+  .demo .panel .bar{height:7px;background:var(--line);border-radius:99px;flex:1;margin:0 12px;overflow:hidden;}
+  .demo .panel .bar>i{display:block;height:100%;background:var(--green);border-radius:99px;}
+  .demo .panel .score{font-family:'Source Serif 4',serif;font-weight:700;color:var(--navy);}
+
+  /* INSIGHTS */
+  .ins{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:44px;}
+  .ins svg{display:block;width:100%;height:150px;border-radius:2px;}
+  .ins .cat{font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--green-d);margin:14px 0 6px;}
+  .ins h3{font-family:'Source Serif 4',serif;font-size:20px;font-weight:600;color:var(--navy);line-height:1.25;}
+
+  /* CTA */
+  .cta{background:var(--navy);color:#fff;text-align:center;padding:92px 0;}
+  .cta h2{font-size:42px;font-weight:600;line-height:1.12;}
+  .cta p{color:#c6d3e2;font-size:19px;margin:16px auto 30px;max-width:48ch;}
+
+  @media(max-width:900px){
+    .hero h1{font-size:40px;} h2.big{font-size:30px;} .cta h2{font-size:30px;} .demo h2{font-size:28px;}
+    .hero .wrap,.vs,.svc,.demo .wrap,.ins,.howgrid{grid-template-columns:1fr;}
+    .proof .wrap{grid-template-columns:1fr 1fr;}
+    .vs .col.old{border-right:none;border-bottom:1px solid var(--line);}
+    section{padding:58px 0;}
+  }
+</style>
+
+<style id="pp-shared">
+.pp-nav{background:#1F3A5F;position:sticky;top:0;z-index:50;}
+.pp-nav .in{max-width:1180px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;height:72px;}
+.pp-nav .lg{color:#fff;font-weight:800;font-size:22px;letter-spacing:.5px;text-decoration:none;font-family:'Inter',sans-serif;}
+.pp-nav .lg span{color:#2BA84A;}
+.pp-nav nav{display:flex;gap:24px;align-items:center;}
+.pp-nav nav a{color:#dfe6ee;font-size:14.5px;text-decoration:none;font-family:'Inter',sans-serif;}
+.pp-nav nav a:hover{color:#fff;}
+.pp-nav nav a.login{color:#8ff0a9;font-weight:600;}
+.pp-nav .cta{background:#2BA84A;color:#fff;padding:10px 20px;border-radius:2px;font-size:14px;font-weight:600;text-decoration:none;font-family:'Inter',sans-serif;white-space:nowrap;}
+.pp-nav .cta:hover{background:#1F7F37;}
+.pp-foot{background:#16293f;color:#9fb1c6;padding:34px 0;font-size:14px;font-family:'Inter',sans-serif;}
+.pp-foot .in{max-width:1180px;margin:0 auto;padding:0 32px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;align-items:center;}
+.pp-foot a{color:#9fb1c6;text-decoration:none;} .pp-foot a:hover{color:#dfe6ee;}
+@media(max-width:860px){.pp-nav .in{height:auto;padding:12px 18px;flex-wrap:wrap;}.pp-nav nav{order:3;width:100%;gap:16px;font-size:13px;padding-top:10px;overflow-x:auto;}}
+</style>
+</head>
+<body><header class="pp-nav"><div class="in">
+<a class="lg" href="index.html">PROFIT<span>|</span>PULSE</a>
+<nav>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="training.html">Training</a>
+<a href="insights.html">Insights</a>
+<a href="contact.html">Contact</a>
+<a class="login" href="https://ppos-gate.jasonc-ec7.workers.dev/" target="_blank" rel="noopener">Team Login</a>
+</nav>
+<a class="cta" href="contact.html">Book a Diagnostic</a>
+</div></header>
+
+  <!-- HERO -->
+  <div class="hero"><div class="wrap">
+    <div>
+      <span class="eyebrow">AI-native consulting · for owner-operators</span>
+      <h1 class="serif">What's the decision you <em>can't afford</em> to get wrong?</h1>
+      <p>We make it clear, defensible, and fast — rigorous structured decisions in days, not months, at a fraction of what the famous firms charge.</p>
+      <div class="actions">
+        <a class="btn" href="contact.html">Book a Free Diagnostic →</a>
+        <a class="btn ghost" href="services.html">See how we work</a>
+      </div>
+    </div>
+    <div>
+      <svg class="art" viewBox="0 0 520 440" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <radialGradient id="glow" cx="50%" cy="45%" r="60%"><stop offset="0%" stop-color="#2BA84A" stop-opacity="0.18"/><stop offset="100%" stop-color="#2BA84A" stop-opacity="0"/></radialGradient>
+          <linearGradient id="pulse" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#8ff0a9" stop-opacity="0"/><stop offset="50%" stop-color="#8ff0a9"/><stop offset="100%" stop-color="#8ff0a9" stop-opacity="0"/></linearGradient>
+        </defs>
+        <rect width="520" height="440" fill="url(#glow)"/>
+        <g stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"><path d="M60 0V440M160 0V440M260 0V440M360 0V440M460 0V440"/><path d="M0 70H520M0 150H520M0 230H520M0 310H520M0 390H520"/></g>
+        <path d="M0 230 H120 L150 230 L165 150 L185 300 L205 200 L225 230 H300" stroke="url(#pulse)" stroke-width="2.4" fill="none"/>
+        <g stroke="#9fb6cf" stroke-opacity="0.5" stroke-width="1.6" fill="none"><path d="M300 230 C360 230 360 120 430 120"/><path d="M300 230 C360 230 360 230 430 230"/><path d="M300 230 C360 230 360 340 430 340"/></g>
+        <circle cx="300" cy="230" r="9" fill="#1F3A5F" stroke="#8ff0a9" stroke-width="2.5"/>
+        <circle cx="430" cy="120" r="7" fill="#16293f" stroke="#9fb6cf" stroke-width="1.6"/>
+        <circle cx="430" cy="230" r="11" fill="#2BA84A"/>
+        <circle cx="430" cy="340" r="7" fill="#16293f" stroke="#9fb6cf" stroke-width="1.6"/>
+        <path d="M300 230 C360 230 360 230 430 230" stroke="#2BA84A" stroke-width="2.6" fill="none"/>
+        <text x="446" y="234" fill="#8ff0a9" font-family="Inter" font-size="12" font-weight="600">chosen</text>
+      </svg>
+    </div>
+  </div></div>
+
+  <!-- PROOF STRIP -->
+  <div class="proof"><div class="wrap">
+    <div class="cell"><div class="num serif">Days</div><div class="lbl">to a defensible decision — not weeks or months</div></div>
+    <div class="cell"><div class="num serif">12-stage</div><div class="lbl">a proprietary, structured decision method</div></div>
+    <div class="cell"><div class="num serif">Duke-led</div><div class="lbl">MBA + MD/PhD founders, Army Ranger veteran</div></div>
+    <div class="cell"><div class="num serif">0 hrs</div><div class="lbl">billed — we price on the outcome, not the clock</div></div>
+  </div></div>
+
+  <!-- OLD VS NEW -->
+  <section><div class="wrap">
+    <div class="rulebar"></div>
+    <span class="eyebrow">The shift</span>
+    <h2 class="big serif">The famous firms are running a playbook from a different era.</h2>
+    <div class="vs">
+      <div class="col old"><h3>The old model</h3><ul>
+        <li>Eight-to-twelve-week diagnostics</li><li>A brand-name partner, then junior analysts</li><li>Hundred-page decks you decode yourself</li><li>Billed by the hour — slowness pays</li><li>They present, then leave</li></ul></div>
+      <div class="col neu"><h3>The Profit Pulse way</h3><ul>
+        <li>Rigorous decisions in days</li><li>Senior principals do the actual work</li><li>One clear, traceable recommendation</li><li>Priced on the outcome, a fraction of the cost</li><li>Pulse Monitor keeps the decision right</li></ul></div>
+    </div>
+  </div></section>
+
+  <!-- SERVICES -->
+  <section class="section-alt"><div class="wrap">
+    <div class="rulebar"></div>
+    <span class="eyebrow">What we do</span>
+    <h2 class="big serif">Make the call. Keep it right. Build the capability.</h2>
+    <div class="svc">
+      <div class="card"><div class="k">Decision Consulting</div><h3 class="serif">The hard call, made clear.</h3><p>We turn a high-stakes decision into a clear, defensible recommendation — every option scored on the same terms, every claim traced to evidence, delivered in days.</p><a class="more" href="services.html">How we work</a></div>
+      <div class="card"><div class="k">Pulse Monitor</div><h3 class="serif">The decision, kept right.</h3><p>Ongoing tracking of the indicators behind your recommendation, so you adjust early as conditions change. The big firms present and leave; we stay on the decision.</p><a class="more" href="services.html">Explore Pulse Monitor</a></div>
+      <div class="card"><div class="k">Corporate AI Training</div><h3 class="serif">Your team, ready to run AI.</h3><p>We train the people leading your AI — execs, directors, managers, team leads — to run it with confidence. Done-for-you, built on our own complete curriculum.</p><a class="more" href="training.html">Bring it to your company</a></div>
+      <div class="card"><div class="k">Unclaimed Funds Recovery</div><h3 class="serif">Money you're owed, recovered.</h3><p>We find and recover unclaimed funds owed to businesses, nonprofits and churches. Contingency only — no cost unless we recover.</p><a class="more" href="unclaimed-funds.html">Start a free review</a></div>
+    </div>
+  </div></section>
+
+  <!-- HOW WE WORK -->
+  <style>.howgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px;}.howc{background:#16293f;border-radius:3px;padding:26px 22px;}.howc .hn{font-family:'Source Serif 4',Georgia,serif;font-size:30px;font-weight:700;color:#8ff0a9;line-height:1;}.howc h3{font-size:18px;font-weight:600;color:#fff;margin:12px 0 8px;}.howc p{color:#9fb1c6;font-size:15px;}</style>
+  <section style="background:#1F3A5F;color:#fff;"><div class="wrap">
+    <div class="rulebar"></div>
+    <span class="eyebrow" style="color:#8ff0a9">How we work</span>
+    <h2 class="serif" style="font-size:38px;font-weight:600;color:#fff;line-height:1.14;max-width:22ch;">AI does the heavy analysis. Our experts turn it into the answer.</h2>
+    <p style="font-size:18px;color:#c6d3e2;max-width:64ch;margin-top:16px;">Our edge isn't a tool you log into — it's AI-accelerated analysis that experienced people research, validate, and refine into a recommendation you can defend.</p>
+    <div class="howgrid">
+      <div class="howc"><div class="hn">1</div><h3>Frame the decision</h3><p>We structure the real question and the constraints that actually bind it.</p></div>
+      <div class="howc"><div class="hn">2</div><h3>AI-accelerated analysis</h3><p>Weeks of structured analysis — options, evidence, scoring — compressed into days.</p></div>
+      <div class="howc" style="background:#1E8044;"><div class="hn" style="color:#fff;">3</div><h3>Expert research &amp; refinement</h3><p style="color:#e3f6e8;">Our professionals research, pressure-test, and refine it into a defensible recommendation.</p></div>
+      <div class="howc"><div class="hn">4</div><h3>Recommendation &amp; monitoring</h3><p>A clear, evidence-backed call — and Pulse Monitor keeps it right as conditions change.</p></div>
+    </div>
+  </div></section>
+
+  <!-- INSIGHTS -->
+  <section><div class="wrap">
+    <div class="rulebar"></div>
+    <span class="eyebrow">Insights</span>
+    <h2 class="big serif">Clear thinking for high-stakes decisions.</h2>
+    <div class="ins">
+      <a href="insight-six-week-diagnostic.html">
+        <svg viewBox="0 0 400 150" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="150" fill="#1F3A5F"/><g stroke="#ffffff" stroke-opacity="0.09"><path d="M0 50H400M0 100H400" stroke-width="1"/></g><path d="M20 120 L90 120 L110 60 L130 135 L150 95 L170 120 L250 120" stroke="#8ff0a9" stroke-width="2.4" fill="none"/><circle cx="250" cy="120" r="6" fill="#2BA84A"/><path d="M250 120 C300 120 300 70 350 70" stroke="#9fb6cf" stroke-opacity="0.6" stroke-width="1.6" fill="none"/><circle cx="350" cy="70" r="5" fill="#2BA84A"/></svg>
+        <div class="cat">Decision Consulting</div><h3>The Six-Week Diagnostic Is Already Obsolete</h3></a>
+      <a href="insight-chief-ai-officer.html">
+        <svg viewBox="0 0 400 150" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="150" fill="#1F7F37"/><g stroke="#ffffff" stroke-opacity="0.14" stroke-width="1.4" fill="none"><circle cx="80" cy="75" r="26"/><circle cx="200" cy="40" r="20"/><circle cx="200" cy="112" r="20"/><circle cx="320" cy="75" r="26"/><path d="M106 75 L180 48M106 75 L180 105M220 40 L300 70M220 112 L300 82"/></g><circle cx="320" cy="75" r="12" fill="#8ff0a9"/></svg>
+        <div class="cat">AI Leadership</div><h3>What a Chief AI Officer Actually Does</h3></a>
+      <a href="insight-bet-the-company.html">
+        <svg viewBox="0 0 400 150" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="150" fill="#16293f"/><g stroke="#9fb6cf" stroke-opacity="0.45" stroke-width="1.4" fill="none"><path d="M30 120 L140 90 L210 100 L300 45 L380 30"/></g><g fill="#2BA84A"><circle cx="140" cy="90" r="4"/><circle cx="300" cy="45" r="6"/></g><path d="M300 45 L300 150" stroke="#2BA84A" stroke-opacity="0.3" stroke-width="1" stroke-dasharray="3 4"/><rect x="30" y="128" width="350" height="1" fill="#ffffff" opacity="0.12"/></svg>
+        <div class="cat">Strategy</div><h3>How to Make a Bet-the-Company Decision</h3></a>
+    </div>
+  </div></section>
+
+  <!-- CTA -->
+  <div class="cta"><div class="wrap">
+    <h2 class="serif">Facing a decision worth getting right?</h2>
+    <p>Thirty minutes. We structure the question, find the real constraints, and show you what an engagement looks like. No cost, no obligation.</p>
+    <a class="btn" href="contact.html">Book a Free Diagnostic →</a>
+  </div></div>
+
+<footer class="pp-foot"><div class="in">
+<span>PROFIT | PULSE &mdash; Real-time Pulse. Lasting Profit.</span>
+<span>info@profitpulseinc.com &nbsp;·&nbsp; <a href="https://ppos-gate.jasonc-ec7.workers.dev/" target="_blank" rel="noopener">Team Login</a> &nbsp;·&nbsp; Profit Pulse Inc., a Delaware corporation</span>
+</div></footer></body>
 </html>

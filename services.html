@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Services — Profit Pulse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#1F3A5F;--navy2:#16293f;--green:#2BA84A;--green-l:#8ff0a9;--green-d:#1F7F37;--ink:#15202B;--muted:#5A6572;--line:#E1E6EC;--warm:#F1EEEA;--maxw:1180px;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Inter',sans-serif;color:var(--ink);line-height:1.6;background:#fff;-webkit-font-smoothing:antialiased;}
+  .serif{font-family:'Source Serif 4',Georgia,serif;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
+  a{text-decoration:none;color:inherit;}
+  .btn{display:inline-block;background:var(--green);color:#fff;font-weight:600;font-size:16px;padding:14px 28px;border-radius:2px;}
+  .btn:hover{background:var(--green-d);}
+  .eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--green-d);}
+  .rulebar{width:46px;height:3px;background:var(--green);margin-bottom:20px;}
+
+  header.nav{background:var(--navy);position:sticky;top:0;z-index:10;}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;}
+  .logo{color:#fff;font-weight:800;font-size:22px;letter-spacing:.5px;}
+  .logo span{color:var(--green);}
+  .nav nav{display:flex;gap:26px;color:#dfe6ee;font-size:14.5px;align-items:center;}
+  .nav .login{color:#8ff0a9;font-weight:600;}
+  .nav .cta{background:var(--green);color:#fff;padding:10px 20px;border-radius:2px;font-size:14px;font-weight:600;}
+
+  .hero{background:var(--navy);color:#fff;padding:76px 0 70px;}
+  .hero .eyebrow{color:var(--green-l);}
+  .hero h1{font-size:54px;line-height:1.06;font-weight:600;letter-spacing:-.015em;margin:16px 0 0;max-width:16ch;}
+  .hero p{font-size:19px;color:#c6d3e2;max-width:60ch;margin:22px 0 0;}
+
+  section{padding:82px 0;}
+  .section-alt{background:var(--warm);}
+  h2.big{font-size:38px;line-height:1.14;font-weight:600;letter-spacing:-.01em;color:var(--navy);max-width:22ch;}
+  .lead{font-size:18px;color:var(--muted);max-width:64ch;margin-top:16px;}
+
+  /* HOW WE WORK steps */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:46px;background:var(--line);border:1px solid var(--line);}
+  .steps .s{background:#fff;padding:32px 28px;}
+  .steps .n{font-family:'Source Serif 4',serif;font-size:30px;font-weight:700;color:var(--green);line-height:1;}
+  .steps h3{font-size:19px;font-weight:600;color:var(--navy);margin:12px 0 8px;}
+  .steps p{color:var(--muted);font-size:15px;}
+  .steps .s.hl{background:var(--navy);}
+  .steps .s.hl .n{color:var(--green-l);}
+  .steps .s.hl h3{color:#fff;}
+  .steps .s.hl p{color:#c6d3e2;}
+
+  /* SERVICE blocks */
+  .svcrow{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:46px;border:1px solid var(--line);}
+  .svcrow .b{padding:40px 36px;}
+  .svcrow .b:first-child{border-right:1px solid var(--line);}
+  .svcrow .k{font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--green-d);font-weight:700;}
+  .svcrow h3{font-size:27px;font-weight:600;color:var(--navy);margin:10px 0 12px;}
+  .svcrow p{color:var(--muted);font-size:16px;}
+  .svcrow ul{list-style:none;margin-top:16px;}
+  .svcrow li{position:relative;padding-left:20px;margin-bottom:8px;font-size:15.5px;}
+  .svcrow li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;background:var(--green);border-radius:50%;}
+
+  /* secondary */
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px;}
+  .two .c{border:1px solid var(--line);border-radius:3px;padding:30px 28px;}
+  .two .c h3{font-size:21px;font-weight:600;color:var(--navy);margin-bottom:8px;}
+  .two .c p{color:var(--muted);font-size:15.5px;}
+  .two .c .more{display:inline-block;margin-top:12px;color:var(--navy);font-weight:600;font-size:14.5px;border-bottom:2px solid var(--green);padding-bottom:2px;}
+
+  .who p{font-size:17.5px;color:var(--muted);max-width:70ch;margin-top:16px;}
+
+  .ctaB{background:var(--navy);color:#fff;text-align:center;padding:88px 0;}
+  .ctaB h2{font-size:40px;font-weight:600;line-height:1.12;}
+  .ctaB p{color:#c6d3e2;font-size:18px;margin:16px auto 28px;max-width:50ch;}
+
+  footer{background:var(--navy2);color:#9fb1c6;padding:36px 0;font-size:14px;}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;align-items:center;}
+  footer a{color:#9fb1c6;}
+  footer .team{opacity:.7;font-size:13px;}
+
+  @media(max-width:900px){
+    .hero h1{font-size:38px;} .steps,.svcrow,.two{grid-template-columns:1fr;}
+    .svcrow .b:first-child{border-right:none;border-bottom:1px solid var(--line);}
+    h2.big,.ctaB h2{font-size:29px;} .nav nav{display:none;} section,.ctaB{padding:54px 0;}
+  }
+</style>
+
+<style id="pp-shared">
+.pp-nav{background:#1F3A5F;position:sticky;top:0;z-index:50;}
+.pp-nav .in{max-width:1180px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;height:72px;}
+.pp-nav .lg{color:#fff;font-weight:800;font-size:22px;letter-spacing:.5px;text-decoration:none;font-family:'Inter',sans-serif;}
+.pp-nav .lg span{color:#2BA84A;}
+.pp-nav nav{display:flex;gap:24px;align-items:center;}
+.pp-nav nav a{color:#dfe6ee;font-size:14.5px;text-decoration:none;font-family:'Inter',sans-serif;}
+.pp-nav nav a:hover{color:#fff;}
+.pp-nav nav a.login{color:#8ff0a9;font-weight:600;}
+.pp-nav .cta{background:#2BA84A;color:#fff;padding:10px 20px;border-radius:2px;font-size:14px;font-weight:600;text-decoration:none;font-family:'Inter',sans-serif;white-space:nowrap;}
+.pp-nav .cta:hover{background:#1F7F37;}
+.pp-foot{background:#16293f;color:#9fb1c6;padding:34px 0;font-size:14px;font-family:'Inter',sans-serif;}
+.pp-foot .in{max-width:1180px;margin:0 auto;padding:0 32px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;align-items:center;}
+.pp-foot a{color:#9fb1c6;text-decoration:none;} .pp-foot a:hover{color:#dfe6ee;}
+@media(max-width:860px){.pp-nav .in{height:auto;padding:12px 18px;flex-wrap:wrap;}.pp-nav nav{order:3;width:100%;gap:16px;font-size:13px;padding-top:10px;overflow-x:auto;}}
+</style>
+</head>
+<body>
+
+  <header class="pp-nav"><div class="in">
+<a class="lg" href="index.html">PROFIT<span>|</span>PULSE</a>
+<nav>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="training.html">Training</a>
+<a href="insights.html">Insights</a>
+<a href="contact.html">Contact</a>
+<a class="login" href="https://ppos-gate.jasonc-ec7.workers.dev/" target="_blank" rel="noopener">Team Login</a>
+</nav>
+<a class="cta" href="contact.html">Book a Diagnostic</a>
+</div></header>
+
+  <!-- HERO -->
+  <div class="hero"><div class="wrap">
+    <span class="eyebrow">Services</span>
+    <h1 class="serif">Make the call. Keep it right.</h1>
+    <p>Two services that cover the full life of a major decision — from the first hard question to the outcome months later. The rigor the famous firms charge a fortune for, delivered in days and priced on results.</p>
+  </div></div>
+
+  <!-- HOW WE WORK -->
+  <section><div class="wrap">
+    <div class="rulebar"></div>
+    <span class="eyebrow">How we work</span>
+    <h2 class="big serif">AI does the heavy analysis. Our experts turn it into the answer.</h2>
+    <p class="lead">Our edge isn't a tool you log into — it's the combination of AI-accelerated analysis and experienced people who research, validate, and refine it into a recommendation you can defend.</p>
+    <div class="steps">
+      <div class="s"><div class="n">1</div><h3>Frame the decision</h3><p>We structure the real question and the constraints that actually bind it.</p></div>
+      <div class="s"><div class="n">2</div><h3>AI-accelerated analysis</h3><p>We compress weeks of structured analysis — options, evidence, scoring — into days.</p></div>
+      <div class="s hl"><div class="n">3</div><h3>Expert research &amp; refinement</h3><p>Our professionals research, pressure-test, and refine it into a defensible recommendation.</p></div>
+      <div class="s"><div class="n">4</div><h3>Recommendation &amp; monitoring</h3><p>You get a clear, evidence-backed call — and Pulse Monitor keeps watch so it stays right.</p></div>
+    </div>
+  </div></section>
+
+  <!-- CORE SERVICES -->
+  <section class="section-alt"><div class="wrap">
+    <div class="rulebar"></div>
+    <span class="eyebrow">Two ways we work with you</span>
+    <h2 class="big serif">Decision consulting, and the layer that keeps it right.</h2>
+    <div class="svcrow">
+      <div class="b">
+        <div class="k">Decision Consulting</div>
+        <h3 class="serif">The hard call, made clear.</h3>
+        <p>When the stakes are high and the path isn't obvious, we give you a structured, defensible answer — fast. We frame the real decision, surface every viable option, stress-test the assumptions, and score each path on the same terms.</p>
+        <ul>
+          <li>A clear recommendation, not a menu of options</li>
+          <li>Every claim traceable to evidence</li>
+          <li>Sensitivity analysis — what has to be true for it to work</li>
+          <li>Delivered in days, not weeks — as a concise report, not a hundred-page deck</li>
+        </ul>
+      </div>
+      <div class="b">
+        <div class="k">Pulse Monitor</div>
+        <h3 class="serif">The decision, kept right.</h3>
+        <p>A decision that's right today can drift as conditions change. Pulse Monitor tracks the indicators behind your recommendation and tells you when something moves enough to matter — so you adjust early, not after the fact.</p>
+        <ul>
+          <li>Ongoing tracking of the indicators that drive your decision</li>
+          <li>Alerts when something shifts enough to act on</li>
+          <li>Three cadences — Essential, Active, Strategic</li>
+          <li>The big firms present and leave; we stay on the decision</li>
+        </ul>
+      </div>
+    </div>
+  </div></section>
+
+  <!-- MORE -->
+  <section><div class="wrap">
+    <div class="rulebar"></div>
+    <span class="eyebrow">Also from Profit Pulse</span>
+    <h2 class="big serif">Capability, and recovery.</h2>
+    <div class="two">
+      <div class="c">
+        <h3 class="serif">Training &amp; Development</h3>
+        <p>We train the people leading your AI — and bring decades of program-management, EVMS, and leadership instruction to your team. Delivered on-site, virtually, or as an executive program.</p>
+        <a class="more" href="training.html">Explore training →</a>
+      </div>
+      <div class="c">
+        <h3 class="serif">Unclaimed Funds Recovery</h3>
+        <p>We find and recover unclaimed funds owed to businesses, nonprofits, and churches. Contingency only — no cost unless we recover.</p>
+        <a class="more" href="unclaimed-funds.html">Start a free review →</a>
+      </div>
+    </div>
+  </div></section>
+
+  <!-- WHO -->
+  <section class="section-alt who"><div class="wrap">
+    <div class="rulebar"></div>
+    <span class="eyebrow">Who we work best with</span>
+    <h2 class="big serif">Built for owner-operators who can't afford to get the big calls wrong.</h2>
+    <p>Profit Pulse is built for owner-operators of $10M–$50M companies facing decisions too important to get wrong — who want a rigorous partner and a straight answer, not a famous logo on the invoice. We're probably not your fit if you want a big-firm brand name, or someone to rubber-stamp a decision you've already made.</p>
+  </div></section>
+
+  <!-- CTA -->
+  <div class="ctaB"><div class="wrap">
+    <h2 class="serif">Start with a free diagnostic.</h2>
+    <p>Tell us the decision you're facing. In thirty minutes we'll structure the question and show you what an engagement looks like. No cost, no obligation.</p>
+    <a class="btn" href="contact.html">Book a Diagnostic →</a>
+  </div></div>
+
+  <footer class="pp-foot"><div class="in">
+<span>PROFIT | PULSE &mdash; Real-time Pulse. Lasting Profit.</span>
+<span>info@profitpulseinc.com &nbsp;·&nbsp; <a href="https://ppos-gate.jasonc-ec7.workers.dev/" target="_blank" rel="noopener">Team Login</a> &nbsp;·&nbsp; Profit Pulse Inc., a Delaware corporation</span>
+</div></footer>
+
+</body>
+</html>

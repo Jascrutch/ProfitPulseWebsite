@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Training & Development — Profit Pulse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#1F3A5F;--navy2:#16293f;--green:#2BA84A;--green-l:#8ff0a9;--green-d:#1F7F37;--ink:#15202B;--muted:#5A6572;--line:#E1E6EC;--warm:#F1EEEA;--maxw:1180px;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Inter',sans-serif;color:var(--ink);line-height:1.6;background:#fff;-webkit-font-smoothing:antialiased;}
+  .serif{font-family:'Source Serif 4',Georgia,serif;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
+  a{text-decoration:none;color:inherit;}
+  .btn{display:inline-block;background:var(--green);color:#fff;font-weight:600;font-size:16px;padding:14px 28px;border-radius:2px;}
+  .btn:hover{background:var(--green-d);}
+  .eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--green-d);}
+  .rulebar{width:46px;height:3px;background:var(--green);margin-bottom:20px;}
+
+  /* NAV (preview) */
+  header.nav{background:var(--navy);position:sticky;top:0;z-index:10;}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;}
+  .logo{color:#fff;font-weight:800;font-size:22px;letter-spacing:.5px;}
+  .logo span{color:var(--green);}
+  .nav nav{display:flex;gap:28px;color:#dfe6ee;font-size:14.5px;}
+  .nav .cta{background:var(--green);color:#fff;padding:10px 20px;border-radius:2px;font-size:14px;font-weight:600;}
+
+  /* HERO */
+  .hero{background:var(--navy);color:#fff;padding:76px 0 70px;}
+  .hero .eyebrow{color:var(--green-l);}
+  .hero h1{font-size:54px;line-height:1.06;font-weight:600;letter-spacing:-.015em;margin:16px 0 0;max-width:18ch;}
+  .hero p{font-size:19px;color:#c6d3e2;max-width:60ch;margin:22px 0 0;}
+
+  /* FLAGSHIP */
+  .flag{padding:80px 0;}
+  .flag .inner{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;}
+  .flag .tag{display:inline-block;background:#E8F7EC;color:var(--green-d);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:2px;}
+  .flag h2{font-size:38px;font-weight:600;color:var(--navy);line-height:1.12;margin:16px 0 14px;}
+  .flag p{font-size:17.5px;color:var(--muted);max-width:52ch;}
+  .flag ul{list-style:none;margin:18px 0 24px;}
+  .flag li{position:relative;padding-left:22px;margin-bottom:9px;font-size:16px;color:var(--ink);}
+  .flag li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;background:var(--green);border-radius:50%;}
+  .flag .art{width:100%;height:auto;border-radius:3px;}
+
+  /* CATALOG */
+  .cat{background:var(--warm);padding:84px 0;}
+  .cat h2.big{font-size:36px;font-weight:600;color:var(--navy);line-height:1.14;max-width:24ch;}
+  .cat .lead{font-size:18px;color:var(--muted);max-width:62ch;margin-top:16px;}
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;margin-top:44px;background:var(--line);border:1px solid var(--line);}
+  .grid .card{background:#fff;padding:34px 32px;}
+  .grid .ic{width:46px;height:46px;margin-bottom:18px;}
+  .grid h3{font-size:22px;font-weight:600;color:var(--navy);margin-bottom:6px;}
+  .grid .fed{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--green-d);background:#E8F7EC;padding:3px 9px;border-radius:2px;margin-bottom:10px;}
+  .grid p{color:var(--muted);font-size:15.5px;}
+
+  /* DELIVERY */
+  .del{padding:74px 0;}
+  .del .row{display:grid;grid-template-columns:repeat(5,1fr);gap:24px;margin-top:40px;}
+  .del .f .n{font-family:'Source Serif 4',serif;font-size:19px;font-weight:600;color:var(--navy);margin-bottom:6px;}
+  .del .f p{color:var(--muted);font-size:15px;}
+
+  /* CTA */
+  .ctaB{background:var(--navy);color:#fff;text-align:center;padding:88px 0;}
+  .ctaB h2{font-size:40px;font-weight:600;line-height:1.12;}
+  .ctaB p{color:#c6d3e2;font-size:18px;margin:16px auto 28px;max-width:50ch;}
+
+  footer{background:var(--navy2);color:#9fb1c6;padding:36px 0;font-size:14px;}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+
+  @media(max-width:900px){
+    .hero h1{font-size:38px;} .flag .inner,.grid,.del .row{grid-template-columns:1fr;}
+    .cat h2.big,.ctaB h2{font-size:29px;} .nav nav{display:none;} .flag,.cat,.del,.ctaB{padding:52px 0;}
+  }
+</style>
+
+<style id="pp-shared">
+.pp-nav{background:#1F3A5F;position:sticky;top:0;z-index:50;}
+.pp-nav .in{max-width:1180px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;height:72px;}
+.pp-nav .lg{color:#fff;font-weight:800;font-size:22px;letter-spacing:.5px;text-decoration:none;font-family:'Inter',sans-serif;}
+.pp-nav .lg span{color:#2BA84A;}
+.pp-nav nav{display:flex;gap:24px;align-items:center;}
+.pp-nav nav a{color:#dfe6ee;font-size:14.5px;text-decoration:none;font-family:'Inter',sans-serif;}
+.pp-nav nav a:hover{color:#fff;}
+.pp-nav nav a.login{color:#8ff0a9;font-weight:600;}
+.pp-nav .cta{background:#2BA84A;color:#fff;padding:10px 20px;border-radius:2px;font-size:14px;font-weight:600;text-decoration:none;font-family:'Inter',sans-serif;white-space:nowrap;}
+.pp-nav .cta:hover{background:#1F7F37;}
+.pp-foot{background:#16293f;color:#9fb1c6;padding:34px 0;font-size:14px;font-family:'Inter',sans-serif;}
+.pp-foot .in{max-width:1180px;margin:0 auto;padding:0 32px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;align-items:center;}
+.pp-foot a{color:#9fb1c6;text-decoration:none;} .pp-foot a:hover{color:#dfe6ee;}
+@media(max-width:860px){.pp-nav .in{height:auto;padding:12px 18px;flex-wrap:wrap;}.pp-nav nav{order:3;width:100%;gap:16px;font-size:13px;padding-top:10px;overflow-x:auto;}}
+</style>
+</head>
+<body>
+
+  <header class="pp-nav"><div class="in">
+<a class="lg" href="index.html">PROFIT<span>|</span>PULSE</a>
+<nav>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="training.html">Training</a>
+<a href="insights.html">Insights</a>
+<a href="contact.html">Contact</a>
+<a class="login" href="https://ppos-gate.jasonc-ec7.workers.dev/" target="_blank" rel="noopener">Team Login</a>
+</nav>
+<a class="cta" href="contact.html">Book a Diagnostic</a>
+</div></header>
+
+  <!-- HERO -->
+  <div class="hero"><div class="wrap">
+    <span class="eyebrow">Training &amp; Development</span>
+    <h1 class="serif">We build the capability inside your company.</h1>
+    <p>Led by our AI Leadership program and backed by decades of program-management and leadership instruction — delivered to your team, on your initiative, at graduate level.</p>
+  </div></div>
+
+  <!-- FLAGSHIP: AI -->
+  <section class="flag"><div class="wrap"><div class="inner">
+    <div>
+      <span class="tag">Our flagship program</span>
+      <h2 class="serif">Corporate AI Leadership Training</h2>
+      <p>We come in and train the people leading your AI — executives, directors, managers, and team leads — to run it with confidence. A done-for-you program built on our own complete, 35-chapter curriculum: from judging what AI can and can't do, through governance and risk, to the boardroom.</p>
+      <ul>
+        <li>For any leader of an AI initiative — not just a Chief AI Officer</li>
+        <li>Built for decision-makers, not engineers — no coding required</li>
+        <li>Ends in a board-ready plan for your own AI initiative</li>
+      </ul>
+      <a class="btn" href="training.html">Explore the AI program →</a>
+    </div>
+    <div>
+      <svg class="art" viewBox="0 0 520 380" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect width="520" height="380" fill="#1F3A5F"/>
+        <radialGradient id="g" cx="60%" cy="45%" r="55%"><stop offset="0%" stop-color="#2BA84A" stop-opacity="0.22"/><stop offset="100%" stop-color="#2BA84A" stop-opacity="0"/></radialGradient>
+        <rect width="520" height="380" fill="url(#g)"/>
+        <g stroke="#ffffff" stroke-opacity="0.07"><path d="M80 0V380M180 0V380M280 0V380M380 0V380M480 0V380"/><path d="M0 70H520M0 150H520M0 230H520M0 310H520"/></g>
+        <!-- layered competency nodes -->
+        <g stroke="#9fb6cf" stroke-opacity="0.5" stroke-width="1.4" fill="none">
+          <path d="M110 190 L220 110M110 190 L220 190M110 190 L220 270M220 110 L340 150M220 190 L340 150M220 190 L340 230M220 270 L340 230M340 150 L430 190M340 230 L430 190"/>
+        </g>
+        <g fill="#16293f" stroke="#9fb6cf" stroke-width="1.5"><circle cx="110" cy="190" r="12"/><circle cx="220" cy="110" r="9"/><circle cx="220" cy="190" r="9"/><circle cx="220" cy="270" r="9"/><circle cx="340" cy="150" r="9"/><circle cx="340" cy="230" r="9"/></g>
+        <circle cx="430" cy="190" r="16" fill="#2BA84A"/>
+        <circle cx="110" cy="190" r="12" fill="#1F3A5F" stroke="#8ff0a9" stroke-width="2"/>
+        <text x="410" y="226" fill="#8ff0a9" font-family="Inter" font-size="12" font-weight="600">AI-ready</text>
+      </svg>
+    </div>
+  </div></div></section>
+
+  <!-- CATALOG -->
+  <section class="cat"><div class="wrap">
+    <div class="rulebar"></div>
+    <span class="eyebrow">The full catalog</span>
+    <h2 class="big serif">Programs backed by real expertise — not a brochure.</h2>
+    <p class="lead">Every program below is taught by a practitioner who has done the work and trained hundreds of professionals in it. We keep the catalog focused on what we're genuinely expert in.</p>
+    <div class="grid">
+
+      <div class="card">
+        <svg class="ic" viewBox="0 0 46 46" fill="none"><rect width="46" height="46" rx="3" fill="#E8F7EC"/><g stroke="#1F7F37" stroke-width="2" fill="none"><circle cx="16" cy="16" r="5"/><circle cx="30" cy="30" r="5"/><path d="M20 20 L26 26M16 21v9M30 25v-9"/></g></svg>
+        <h3 class="serif">AI Leadership</h3>
+        <p>Our flagship — for anyone leading an AI initiative, from the C-suite to team leads. See above.</p>
+      </div>
+
+      <div class="card">
+        <span class="fed">Defense / Federal</span>
+        <svg class="ic" viewBox="0 0 46 46" fill="none"><rect width="46" height="46" rx="3" fill="#EAF0F6"/><g stroke="#1F3A5F" stroke-width="2" fill="none"><path d="M12 32 C20 32 22 16 34 14"/><path d="M12 14V34H34"/><circle cx="34" cy="14" r="2.5" fill="#2BA84A" stroke="none"/></g></svg>
+        <h3 class="serif">Earned Value Management (EVMS / EIA-748)</h3>
+        <p>Implementation, surveillance readiness, and compliance training across all six DoD- and DOE-required process areas — led by a recognized EIA-748 subject-matter expert.</p>
+      </div>
+
+      <div class="card">
+        <svg class="ic" viewBox="0 0 46 46" fill="none"><rect width="46" height="46" rx="3" fill="#EAF0F6"/><g fill="#1F3A5F"><rect x="12" y="14" width="18" height="4" rx="1"/><rect x="16" y="22" width="18" height="4" rx="1"/><rect x="12" y="30" width="12" height="4" rx="1"/></g><rect x="12" y="14" width="5" height="4" fill="#2BA84A"/></svg>
+        <h3 class="serif">Program &amp; Project Management</h3>
+        <p>Structured program and project management and master scheduling — the discipline that keeps complex programs on cost, on schedule, and defensible.</p>
+      </div>
+
+      <div class="card">
+        <svg class="ic" viewBox="0 0 46 46" fill="none"><rect width="46" height="46" rx="3" fill="#EAF0F6"/><g stroke="#1F3A5F" stroke-width="2" fill="none"><circle cx="23" cy="19" r="5"/><path d="M14 34 C14 27 32 27 32 34"/></g><circle cx="33" cy="16" r="3" fill="#2BA84A"/></svg>
+        <h3 class="serif">Leadership &amp; Communication</h3>
+        <p>Graduate-level leadership and executive communication — leading teams, briefing boards and stakeholders, and communicating clearly under pressure.</p>
+      </div>
+
+      <div class="card">
+        <svg class="ic" viewBox="0 0 46 46" fill="none"><rect width="46" height="46" rx="3" fill="#E8F7EC"/><g stroke="#1F7F37" stroke-width="2" fill="none"><path d="M14 23 H22"/><path d="M22 23 C28 23 28 14 34 14"/><path d="M22 23 C28 23 28 32 34 32"/></g><circle cx="34" cy="14" r="3" fill="#2BA84A" stroke="none"/><circle cx="22" cy="23" r="3" fill="#1F7F37" stroke="none"/></svg>
+        <h3 class="serif">Structured Decision-Making</h3>
+        <p>A disciplined method for framing, scoring, and defending high-stakes decisions — the same rigor we bring to our own engagements, taught to your leaders.</p>
+      </div>
+
+      <div class="card" style="display:flex;flex-direction:column;justify-content:center;background:#1F3A5F;color:#fff;">
+        <h3 class="serif" style="color:#fff;">Need a tailored program?</h3>
+        <p style="color:#c6d3e2;margin-bottom:16px;">We build custom cohorts around your team's real initiative and your industry.</p>
+        <a class="btn" href="contact.html" style="align-self:flex-start;">Talk to us →</a>
+      </div>
+
+    </div>
+  </div></section>
+
+  <!-- DELIVERY -->
+  <section class="del"><div class="wrap">
+    <div class="rulebar"></div>
+    <span class="eyebrow">How we deliver</span>
+    <h2 class="serif" style="font-size:32px;font-weight:600;color:var(--navy);margin-top:10px;">Built around your team, not a classroom.</h2>
+    <div class="row">
+      <div class="f"><div class="n">On-site cohort</div><p>Delivered at your company, built around your own live initiative.</p></div>
+      <div class="f"><div class="n">Virtual &amp; live online</div><p>The same program delivered live online, for distributed or remote teams.</p></div>
+      <div class="f"><div class="n">Executive program</div><p>A focused track for senior leaders and the board.</p></div>
+      <div class="f"><div class="n">Intensive</div><p>A multi-day immersion when you need capability fast.</p></div>
+      <div class="f"><div class="n">Ongoing advisory</div><p>Training that rolls into hands-on support as you apply it.</p></div>
+    </div>
+  </div></section>
+
+  <!-- CTA -->
+  <div class="ctaB"><div class="wrap">
+    <h2 class="serif">Build the capability your team needs.</h2>
+    <p>Tell us about your team and the outcomes you want. We'll design the program and show you the formats and timeline.</p>
+    <a class="btn" href="contact.html">Request Training →</a>
+  </div></div>
+
+  <footer class="pp-foot"><div class="in">
+<span>PROFIT | PULSE &mdash; Real-time Pulse. Lasting Profit.</span>
+<span>info@profitpulseinc.com &nbsp;·&nbsp; <a href="https://ppos-gate.jasonc-ec7.workers.dev/" target="_blank" rel="noopener">Team Login</a> &nbsp;·&nbsp; Profit Pulse Inc., a Delaware corporation</span>
+</div></footer>
+
+</body>
+</html>

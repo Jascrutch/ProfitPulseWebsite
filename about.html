@@ -1,0 +1,130 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>About — Profit Pulse</title><meta name="description" content="Why we built Profit Pulse, the principles behind every engagement, and the leadership behind the firm."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1F3A5F;--navy2:#16293f;--green:#2BA84A;--green-l:#8ff0a9;--green-d:#1F7F37;--ink:#15202B;--muted:#5A6572;--line:#E1E6EC;--warm:#F1EEEA;--maxw:1180px;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:var(--ink);line-height:1.6;background:#fff;-webkit-font-smoothing:antialiased;}
+.serif{font-family:'Source Serif 4',Georgia,serif;}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
+.narrow{max-width:760px;}
+a{text-decoration:none;color:inherit;}
+.btn{display:inline-block;background:var(--green);color:#fff;font-weight:600;font-size:16px;padding:14px 28px;border-radius:2px;}
+.btn:hover{background:var(--green-d);}
+.eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--green-d);}
+.rulebar{width:46px;height:3px;background:var(--green);margin-bottom:20px;}
+.hero{background:var(--navy);color:#fff;padding:76px 0 70px;}
+.hero .eyebrow{color:var(--green-l);}
+.hero h1{font-size:52px;line-height:1.06;font-weight:600;letter-spacing:-.015em;margin:16px 0 0;max-width:20ch;}
+.hero p{font-size:19px;color:#c6d3e2;max-width:62ch;margin:22px 0 0;}
+section{padding:74px 0;}
+.section-alt{background:var(--warm);}
+h2.big{font-size:36px;line-height:1.16;font-weight:600;letter-spacing:-.01em;color:var(--navy);max-width:24ch;}
+.lead{font-size:18px;color:var(--muted);max-width:66ch;margin-top:16px;}
+.prose p{font-size:17.5px;color:#2b3540;margin-top:18px;max-width:70ch;}
+.prose h3{font-size:22px;color:var(--navy);font-weight:600;margin-top:34px;}
+.prose ul{margin:16px 0 0 0;list-style:none;max-width:70ch;}
+.prose li{position:relative;padding-left:22px;margin-bottom:10px;font-size:17px;color:#2b3540;}
+.prose li::before{content:"";position:absolute;left:0;top:11px;width:7px;height:7px;background:var(--green);border-radius:50%;}
+.prin{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;margin-top:44px;background:var(--line);border:1px solid var(--line);}
+.prin .p{background:#fff;padding:28px 22px;}
+.prin .k{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--green-d);}
+.prin p{color:var(--muted);font-size:15px;margin-top:8px;}
+.team{display:grid;grid-template-columns:1fr;gap:26px;margin-top:40px;}
+.person{border:1px solid var(--line);border-radius:3px;padding:34px 32px;}
+.person .nm{font-size:24px;font-weight:600;color:var(--navy);}
+.person .rl{color:var(--green-d);font-weight:600;font-size:14px;letter-spacing:.04em;text-transform:uppercase;margin-top:2px;}
+.person p{color:#3a4654;font-size:16.5px;margin-top:14px;max-width:80ch;}
+.ctaB{background:var(--navy);color:#fff;text-align:center;padding:84px 0;}
+.ctaB h2{font-size:38px;font-weight:600;line-height:1.12;}
+.ctaB p{color:#c6d3e2;font-size:18px;margin:16px auto 26px;max-width:52ch;}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px;max-width:620px;}
+.form .full{grid-column:1/3;}
+.form label{display:block;font-size:13px;font-weight:600;color:var(--navy);margin-bottom:6px;}
+.form input,.form textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:4px;font-size:15px;font-family:inherit;}
+.form textarea{min-height:120px;resize:vertical;}
+.cols{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start;}
+.faq{border-top:1px solid var(--line);padding:22px 0;}
+.faq h4{font-size:18px;color:var(--navy);font-weight:600;}
+.faq p{color:var(--muted);font-size:16px;margin-top:8px;max-width:72ch;}
+.expect{list-style:none;margin-top:18px;}
+.expect li{position:relative;padding-left:22px;margin-bottom:10px;color:#2b3540;font-size:16px;}
+.expect li::before{content:"";position:absolute;left:0;top:10px;width:7px;height:7px;background:var(--green);border-radius:50%;}
+@media(max-width:900px){.hero h1{font-size:36px;}h2.big,.ctaB h2{font-size:28px;}.prin{grid-template-columns:1fr 1fr;}.cols{grid-template-columns:1fr;}.form{grid-template-columns:1fr;}.form .full{grid-column:1;}section,.ctaB{padding:52px 0;}}
+</style>
+<style id="pp-shared">
+.pp-nav{background:#1F3A5F;position:sticky;top:0;z-index:50;}
+.pp-nav .in{max-width:1180px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;height:72px;}
+.pp-nav .lg{color:#fff;font-weight:800;font-size:22px;letter-spacing:.5px;text-decoration:none;font-family:'Inter',sans-serif;}
+.pp-nav .lg span{color:#2BA84A;}
+.pp-nav nav{display:flex;gap:24px;align-items:center;}
+.pp-nav nav a{color:#dfe6ee;font-size:14.5px;text-decoration:none;font-family:'Inter',sans-serif;}
+.pp-nav nav a:hover{color:#fff;}
+.pp-nav nav a.login{color:#8ff0a9;font-weight:600;}
+.pp-nav .cta{background:#2BA84A;color:#fff;padding:10px 20px;border-radius:2px;font-size:14px;font-weight:600;text-decoration:none;font-family:'Inter',sans-serif;white-space:nowrap;}
+.pp-nav .cta:hover{background:#1F7F37;}
+.pp-foot{background:#16293f;color:#9fb1c6;padding:34px 0;font-size:14px;font-family:'Inter',sans-serif;}
+.pp-foot .in{max-width:1180px;margin:0 auto;padding:0 32px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;align-items:center;}
+.pp-foot a{color:#9fb1c6;text-decoration:none;} .pp-foot a:hover{color:#dfe6ee;}
+@media(max-width:860px){.pp-nav .in{height:auto;padding:12px 18px;flex-wrap:wrap;}.pp-nav nav{order:3;width:100%;gap:16px;font-size:13px;padding-top:10px;overflow-x:auto;}}
+</style></head><body><header class="pp-nav"><div class="in">
+<a class="lg" href="index.html">PROFIT<span>|</span>PULSE</a>
+<nav>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="training.html">Training</a>
+<a href="insights.html">Insights</a>
+<a href="contact.html">Contact</a>
+<a class="login" href="https://ppos-gate.jasonc-ec7.workers.dev/" target="_blank" rel="noopener">Team Login</a>
+</nav>
+<a class="cta" href="contact.html">Book a Diagnostic</a>
+</div></header>
+<div class="hero"><div class="wrap">
+  <span class="eyebrow">About</span>
+  <h1 class="serif">Consulting was due for a rebuild. So we built it.</h1>
+  <p>Profit Pulse pairs structured decision intelligence with AI-accelerated analysis, applied by experienced people &mdash; to deliver better outcomes, faster, at a fraction of the cost of the famous firms.</p>
+</div></div>
+
+<section><div class="wrap narrow prose">
+  <div class="rulebar"></div>
+  <span class="eyebrow">Why we built this</span>
+  <h2 class="big serif">A better way to make the calls that matter.</h2>
+  <p>Traditional consulting was built for a different era &mdash; when analysis was scarce, expertise was rare, and clients paid for access to knowledge that lived inside specialist firms. That era is over.</p>
+  <p>AI now accelerates analysis to a degree that would have been unthinkable a decade ago. Yet most firms still operate as though nothing has changed: the same hourly rates, the same six-week diagnostics, the same hundred-page decks.</p>
+  <p>Profit Pulse was founded on a simple premise &mdash; there is a better way. Combine the rigor of a structured decision method with the speed of AI-accelerated analysis, applied by experienced people who know which questions actually matter. Deliver outcomes faster. Charge less. Earn the relationship through results, not billable hours.</p>
+</div></div>
+
+<section class="section-alt"><div class="wrap">
+  <div class="rulebar"></div>
+  <span class="eyebrow">What guides us</span>
+  <h2 class="big serif">Five principles behind every engagement.</h2>
+  <div class="prin">
+    <div class="p"><div class="k">Evidence over opinion</div><p>Every claim should trace to specific evidence &mdash; not authority or reputation.</p></div>
+    <div class="p"><div class="k">Structure over guesswork</div><p>Good decisions come from a disciplined process, not a charismatic slide deck.</p></div>
+    <div class="p"><div class="k">Speed without shortcuts</div><p>AI lets us move fast while keeping the rigor a serious decision demands.</p></div>
+    <div class="p"><div class="k">Honesty about uncertainty</div><p>We show how confident we are and where the risks sit &mdash; not just the answer we like.</p></div>
+    <div class="p"><div class="k">Outcomes, not hours</div><p>We earn the relationship through results, priced on value &mdash; not billable time.</p></div>
+  </div>
+</div></div>
+
+<section><div class="wrap">
+  <div class="rulebar"></div>
+  <span class="eyebrow">Leadership</span>
+  <h2 class="big serif">Senior people doing the actual work.</h2>
+  <div class="team">
+    <div class="person">
+      <div class="nm serif">Jason P. Crutchfield</div>
+      <div class="rl">Founder &amp; CEO</div>
+      <p>Jason brings more than three decades of senior leadership and structured decision-making to Profit Pulse. He holds an MBA from Duke University's Fuqua School of Business and a B.S. from the University of Alaska Anchorage, and served with the 2nd Battalion, 75th Ranger Regiment &mdash; where he developed the operational discipline and mission focus that anchor his approach to every engagement.</p>
+      <p>His career spans senior program leadership across major federal and defense programs, with deep expertise in earned value management (EIA-748), master scheduling, and the rigor required to keep complex, high-stakes programs on cost, on schedule, and defensible. He holds a DOE 413.3B EVMS credential and active DoE Q and DoD security clearances.</p>
+    </div>
+  </div>
+</div></div>
+
+<div class="ctaB"><div class="wrap">
+  <h2 class="serif">Facing a decision worth getting right?</h2>
+  <p>Book a free 30-minute Decision Diagnostic. No cost, no obligation &mdash; often the clarity alone is worth the half hour.</p>
+  <a class="btn" href="contact.html">Book a Diagnostic &rarr;</a>
+</div></div>
+<footer class="pp-foot"><div class="in">
+<span>PROFIT | PULSE &mdash; Real-time Pulse. Lasting Profit.</span>
+<span>info@profitpulseinc.com &nbsp;·&nbsp; <a href="https://ppos-gate.jasonc-ec7.workers.dev/" target="_blank" rel="noopener">Team Login</a> &nbsp;·&nbsp; Profit Pulse Inc., a Delaware corporation</span>
+</div></footer></body></html>
