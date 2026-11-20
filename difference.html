@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why Profit Pulse — Consulting That Shows Its Work</title>
+<meta name="description" content="Committed KPIs, measured results, a published delivery record, fees that can share the risk, and full AI transparency. The Profit Pulse difference.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#1F3A5F;--navy2:#16293f;--green:#2BA84A;--green-l:#8ff0a9;--green-d:#1F7F37;--ink:#15202B;--muted:#5A6572;--line:#E1E6EC;--warm:#F1EEEA;--maxw:1180px;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:var(--ink);line-height:1.6;background:#fff;-webkit-font-smoothing:antialiased;}
+  .serif{font-family:'Source Serif 4',Georgia,'Times New Roman',serif;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
+  a{text-decoration:none;color:inherit;}
+  .btn{display:inline-block;background:var(--green);color:#fff;font-weight:600;font-size:16px;padding:14px 28px;border-radius:2px;transition:background .18s;}
+  .btn:hover{background:var(--green-d);}
+  .eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--green-d);}
+  .rulebar{width:46px;height:3px;background:var(--green);margin-bottom:22px;}
+  section{padding:84px 0;}
+  .section-alt{background:var(--warm);}
+  h2.big{font-size:40px;line-height:1.14;font-weight:600;letter-spacing:-.01em;color:var(--navy);max-width:24ch;}
+  .lead{font-size:18px;color:var(--muted);max-width:66ch;margin-top:16px;}
+
+  /* HERO */
+  .hero{background:var(--navy);color:#fff;}
+  .hero .wrap{padding-top:72px;padding-bottom:70px;}
+  .hero .eyebrow{color:var(--green-l);}
+  .hero h1{font-size:54px;line-height:1.06;font-weight:600;letter-spacing:-.015em;margin:18px 0 0;max-width:20ch;}
+  .hero p{font-size:19.5px;color:#c6d3e2;max-width:62ch;margin:22px 0 0;}
+
+  /* TWO OPEN SECRETS */
+  .secrets{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:44px;}
+  .secrets .s{background:#fff;padding:36px 34px;}
+  .secrets .s .big-no{font-family:'Source Serif 4',serif;font-size:44px;font-weight:700;color:var(--navy);line-height:1;}
+  .secrets .s h3{font-size:20px;font-weight:600;color:var(--navy);margin:12px 0 8px;}
+  .secrets .s p{color:var(--muted);font-size:16px;}
+  .secrets .s .src{font-size:12.5px;color:#8a93a0;margin-top:12px;}
+
+  /* COMMITMENTS */
+  .commit{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px;}
+  .commit .c{background:var(--navy2);border-radius:3px;padding:28px 24px;}
+  .commit .c .n{font-family:'Source Serif 4',serif;font-size:28px;font-weight:700;color:var(--green-l);line-height:1;}
+  .commit .c h3{font-size:18.5px;font-weight:600;color:#fff;margin:12px 0 8px;}
+  .commit .c p{color:#9fb1c6;font-size:15px;}
+  .commit .c.hl{background:#1E8044;}
+  .commit .c.hl .n{color:#fff;}
+  .commit .c.hl p{color:#e3f6e8;}
+
+  /* METHOD */
+  .method{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:44px;}
+  .method .m{background:#fff;padding:30px 28px;}
+  .method .m .k{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green-d);}
+  .method .m h3{font-family:'Source Serif 4',serif;font-size:21px;font-weight:600;color:var(--navy);margin:8px 0 8px;}
+  .method .m p{color:var(--muted);font-size:15px;}
+
+  /* DELIVERABLES */
+  .deliv{display:grid;grid-template-columns:1fr 1fr;gap:12px 40px;margin-top:40px;max-width:980px;}
+  .deliv .d{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--line);}
+  .deliv .d .tick{flex:0 0 auto;width:22px;height:22px;border-radius:50%;background:var(--green);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:2px;}
+  .deliv .d b{color:var(--navy);}
+  .deliv .d span{display:block;color:var(--muted);font-size:14.5px;}
+
+  /* HONEST NOTE */
+  .honest{background:var(--navy);color:#fff;}
+  .honest .wrap{padding:64px 32px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:start;max-width:var(--maxw);margin:0 auto;}
+  .honest .mark{font-family:'Source Serif 4',serif;font-size:56px;font-weight:700;color:var(--green-l);line-height:1;}
+  .honest h2{font-size:28px;font-weight:600;line-height:1.2;max-width:26ch;}
+  .honest p{color:#c6d3e2;font-size:17px;margin-top:12px;max-width:68ch;}
+
+  /* CTA */
+  .ctaB{background:var(--navy2);color:#fff;text-align:center;padding:92px 0;}
+  .ctaB h2{font-size:40px;font-weight:600;line-height:1.12;}
+  .ctaB p{color:#c6d3e2;font-size:18px;margin:16px auto 30px;max-width:52ch;}
+
+  @media(max-width:900px){
+    .hero h1{font-size:36px;} h2.big{font-size:30px;} .ctaB h2{font-size:30px;}
+    .secrets,.commit,.method,.deliv{grid-template-columns:1fr;}
+    .honest .wrap{grid-template-columns:1fr;}
+    section{padding:58px 0;}
+  }
+</style>
+
+<style id="pp-shared">
+.pp-nav{background:#1F3A5F;position:sticky;top:0;z-index:50;}
+.pp-nav .in{max-width:1180px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;height:72px;}
+.pp-nav .lg{color:#fff;font-weight:800;font-size:22px;letter-spacing:.5px;text-decoration:none;font-family:'Inter',sans-serif;}
+.pp-nav .lg span{color:#2BA84A;}
+.pp-nav nav{display:flex;gap:24px;align-items:center;}
+.pp-nav nav a{color:#dfe6ee;font-size:14.5px;text-decoration:none;font-family:'Inter',sans-serif;}
+.pp-nav nav a:hover{color:#fff;}
+.pp-nav nav a.login{color:#8ff0a9;font-weight:600;}
+.pp-nav .cta{background:#2BA84A;color:#fff;padding:10px 20px;border-radius:2px;font-size:14px;font-weight:600;text-decoration:none;font-family:'Inter',sans-serif;white-space:nowrap;}
+.pp-nav .cta:hover{background:#1F7F37;}
+.pp-foot{background:#16293f;color:#9fb1c6;padding:34px 0;font-size:14px;font-family:'Inter',sans-serif;}
+.pp-foot .in{max-width:1180px;margin:0 auto;padding:0 32px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;align-items:center;}
+.pp-foot a{color:#9fb1c6;text-decoration:none;} .pp-foot a:hover{color:#dfe6ee;}
+@media(max-width:860px){.pp-nav .in{height:auto;padding:12px 18px;flex-wrap:wrap;}.pp-nav nav{order:3;width:100%;gap:16px;font-size:13px;padding-top:10px;overflow-x:auto;}}
+</style>
+</head>
+<body><header class="pp-nav"><div class="in">
+<a class="lg" href="index.html">PROFIT<span>|</span>PULSE</a>
+<nav>
+<a href="about.html">About</a>
+<a href="difference.html">Why Us</a>
+<a href="services.html">Services</a>
+<a href="training.html">Training</a>
+<a href="insights.html">Insights</a>
+<a href="contact.html">Contact</a>
+<a class="login" href="https://ppos-gate.jasonc-ec7.workers.dev/" target="_blank" rel="noopener">Team Login</a>
+</nav>
+<a class="cta" href="contact.html">Book a Diagnostic</a>
+</div></header>
+
+  <!-- HERO -->
+  <div class="hero"><div class="wrap">
+    <span class="eyebrow">Why Profit Pulse</span>
+    <h1 class="serif">Consulting that shows its work.</h1>
+    <p>Most consulting runs on trust: a famous name, a confident deck, an invoice. We built our practice on something stronger — commitments you can measure, records you can audit, and fees we're willing to put at risk against the results.</p>
+  </div></div>
+
+  <!-- THE INDUSTRY'S TWO OPEN SECRETS -->
+  <section><div class="wrap">
+    <div class="rulebar"></div>
+    <span class="eyebrow">The industry's two open secrets</span>
+    <h2 class="big serif">Consulting has a results problem. Everyone in it knows.</h2>
+    <div class="secrets">
+      <div class="s">
+        <div class="big-no">~Half</div>
+        <h3>of consulting recommendations are never implemented.</h3>
+        <p>Not because the analysis was wrong — because the firm presented and left. The politics, the people, and the follow-through were somebody else's problem. Industry research has documented this gap for years.</p>
+        <div class="src">Our answer: we don't leave. Monitoring is part of the engagement, not an upsell after the fact.</div>
+      </div>
+      <div class="s">
+        <div class="big-no">No. 1</div>
+        <h3>reason firms don't get hired: they can't prove their worth.</h3>
+        <p>In industry surveys, consultants themselves rank "proving value" as a bigger obstacle than price. Most firms simply never measure what happened after the report.</p>
+        <div class="src">Our answer: measurement is built into every engagement from day one.</div>
+      </div>
+    </div>
+  </div></section>
+
+  <!-- SIX COMMITMENTS -->
+  <section class="section-alt"><div class="wrap">
+    <div class="rulebar"></div>
+    <span class="eyebrow">Our commitments</span>
+    <h2 class="big serif">Six things we do on every engagement that the famous firms won't.</h2>
+    <div class="commit">
+      <div class="c"><div class="n">1</div><h3>Every number traces.</h3><p>Every claim in our analysis cites its evidence, and every dollar figure shows the formula behind it. If we can't ground it, we say so — we never fill a gap with a confident guess.</p></div>
+      <div class="c"><div class="n">2</div><h3>We commit targets before we leave.</h3><p>Your report ends with measurable KPIs — baselines, 90-day targets, warning thresholds — and the kill criteria that would mean stop and re-decide. In writing, on the record.</p></div>
+      <div class="c hl"><div class="n">3</div><h3>We measure what we promised.</h3><p>At every check-in we record results from your own numbers — and you can request a Value Realization Statement anytime: what was committed, what's been measured, side by side. We record results; we don't attribute them to ourselves.</p></div>
+      <div class="c"><div class="n">4</div><h3>Our record is open to clients.</h3><p>Targets hit versus targets committed, and how well our confidence calibrates against outcomes — tracked across engagements and shown to the people who hire us. Ask any big firm for their batting average.</p></div>
+      <div class="c"><div class="n">5</div><h3>We'll share the risk.</h3><p>Where it fits, we offer a base fee plus a success fee on measured value — metered by the same dated check-in records you hold. No value measured, no success fee. That's a sentence most firms can't sign.</p></div>
+      <div class="c"><div class="n">6</div><h3>We tell you what the AI did.</h3><p>Every report ends with "How This Document Was Produced" — what the AI drafted, what our professionals verified, and what's pure arithmetic. No mystery, no black box.</p></div>
+    </div>
+  </div></section>
+
+  <!-- THE METHOD -->
+  <section><div class="wrap">
+    <div class="rulebar"></div>
+    <span class="eyebrow">The method behind it</span>
+    <h2 class="big serif">The questions the best decision science asks — asked every time.</h2>
+    <p class="lead">Our proprietary 12-stage methodology compresses the discipline of elite decision analysis into days. Six moves carry the weight:</p>
+    <div class="method">
+      <div class="m"><div class="k">Frame</div><h3>Name the real decision</h3><p>The question as asked is rarely the question that matters. We structure the real one, with the constraints that actually bind it.</p></div>
+      <div class="m"><div class="k">Widen</div><h3>Surface every live option</h3><p>Most bad decisions were between two options when there were five. We widen the set before anything gets scored.</p></div>
+      <div class="m"><div class="k">Ground</div><h3>Evidence, cited</h3><p>Claims are tied to documents, data, and named sources — including your own financials, read and ratio-checked.</p></div>
+      <div class="m"><div class="k">Score</div><h3>Same terms, every option</h3><p>Weighted criteria, dollar outcomes, probabilities — and simulation to show how robust the leader really is.</p></div>
+      <div class="m"><div class="k">Attack</div><h3>Try to kill the answer</h3><p>Pre-mortem, adversarial re-scoring, and the outside view: how decisions like this one actually go, per the published research — before you commit, not after.</p></div>
+      <div class="m"><div class="k">Commit</div><h3>Then stay on it</h3><p>KPIs, kill criteria, and a living risk register — monitored on a cadence, with a clear update in your hands every month.</p></div>
+    </div>
+  </div></section>
+
+  <!-- WHAT YOU WALK AWAY WITH -->
+  <section class="section-alt"><div class="wrap">
+    <div class="rulebar"></div>
+    <span class="eyebrow">What you walk away with</span>
+    <h2 class="big serif">Deliverables made to be used, not filed.</h2>
+    <div class="deliv">
+      <div class="d"><div class="tick">✓</div><div><b>The decision report</b><span>A clear recommendation with the evidence, the scoring, and a one-page executive summary — not a hundred-page deck.</span></div></div>
+      <div class="d"><div class="tick">✓</div><div><b>Committed KPIs &amp; kill criteria</b><span>How you'll know it's working — and the specific conditions that would mean stop and re-decide.</span></div></div>
+      <div class="d"><div class="tick">✓</div><div><b>A living risk register</b><span>Seeded from the analysis, updated at every check-in, each open risk carrying a mitigation and a first step.</span></div></div>
+      <div class="d"><div class="tick">✓</div><div><b>The monthly Pulse Update</b><span>Readings against your thresholds, trends and trajectory, execution status — and what changed in the world around you.</span></div></div>
+      <div class="d"><div class="tick">✓</div><div><b>A Value Realization Statement</b><span>On request: what was committed, what's been measured to date, in your numbers — the receipts.</span></div></div>
+      <div class="d"><div class="tick">✓</div><div><b>"Running It Without Us"</b><span>A knowledge-transfer pack: the method, the thresholds, and the review rhythm, written for your own team to carry forward.</span></div></div>
+    </div>
+  </div></section>
+
+  <!-- HONEST NOTE -->
+  <div class="honest"><div class="wrap">
+    <div class="mark serif">"</div>
+    <div>
+      <h2 class="serif">What you won't find on this page.</h2>
+      <p>No invented testimonials. No stock-photo team. No results we can't trace to a dated record. As our clients' measured outcomes accumulate, you'll see them here — verbatim, with their permission, and not before. We'd rather earn the page than fill it.</p>
+    </div>
+  </div></div>
+
+  <!-- CTA -->
+  <div class="ctaB"><div class="wrap">
+    <h2 class="serif">Hold us to all of it.</h2>
+    <p>Bring us the decision you can't afford to get wrong. In thirty minutes we'll structure the question and show you exactly what an engagement — and its measurement — looks like.</p>
+    <a class="btn" href="contact.html">Book a Free Diagnostic →</a>
+  </div></div>
+
+<footer class="pp-foot"><div class="in">
+<span>PROFIT | PULSE &mdash; Real-time Pulse. Lasting Profit.</span>
+<span>info@profitpulseinc.com &nbsp;·&nbsp; <a href="https://ppos-gate.jasonc-ec7.workers.dev/" target="_blank" rel="noopener">Team Login</a> &nbsp;·&nbsp; Profit Pulse Inc., a Delaware corporation</span>
+</div></footer></body>
+</html>
