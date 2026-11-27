@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Pulse Brief | Profit Pulse</title>
+<meta name="description" content="The Pulse Brief — short, dated notes on decisions, AI, and the consulting market. Published when there's something worth saying — most weeks.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#1F3A5F;--green:#2BA84A;--green-dark:#1F7F37;--ink:#1A1A1A;--muted:#5A6572;--bg:#F7F9FB;--line:#E3E8EF;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--ink);line-height:1.6;background:#fff;-webkit-font-smoothing:antialiased;}
+  .hero{background:linear-gradient(160deg,#1F3A5F,#17304f);color:#fff;padding:72px 0 64px;}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 24px;}
+  .hero .eyebrow{font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#8ff0a9;margin-bottom:14px;}
+  .hero h1{font-size:44px;font-weight:800;letter-spacing:-.02em;line-height:1.1;}
+  .hero p{font-size:19px;color:#c9d6e5;margin-top:16px;max-width:660px;}
+  .feed{padding:56px 0 72px;}
+  .card{display:grid;grid-template-columns:150px 1fr;gap:26px;align-items:center;padding:26px 0;border-bottom:1px solid var(--line);text-decoration:none;color:inherit;transition:transform .15s;}
+  .card:hover{transform:translateX(4px);}
+  .card:hover h2{color:var(--green-dark);}
+  .thumb{height:104px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:15px;text-align:center;padding:12px;line-height:1.25;}
+  .t1{background:linear-gradient(135deg,#1F3A5F,#2b5f8f);}
+  .t2{background:linear-gradient(135deg,#1F7F37,#2BA84A);}
+  .t3{background:linear-gradient(135deg,#2a3f5f,#3a6ea5);}
+  .cat{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--green-dark);}
+  .card h2{font-size:24px;font-weight:800;color:var(--navy);margin:5px 0 8px;letter-spacing:-.01em;line-height:1.2;}
+  .card p{color:var(--muted);font-size:16px;}
+  .read{display:inline-block;margin-top:10px;color:var(--green-dark);font-weight:600;font-size:15px;}
+  .cta{background:var(--bg);text-align:center;padding:60px 0;}
+  .cta h2{font-size:30px;color:var(--navy);font-weight:800;}
+  .cta p{color:var(--muted);font-size:18px;margin:12px auto 26px;max-width:540px;}
+  .btn{display:inline-block;background:var(--green);color:#fff;font-weight:600;font-size:16px;padding:13px 28px;border-radius:8px;text-decoration:none;}
+  .btn:hover{background:var(--green-dark);}
+  @media(max-width:720px){.hero h1{font-size:31px;}.card{grid-template-columns:1fr;}.thumb{height:80px;}}
+</style>
+
+<style id="pp-shared">
+.pp-nav{background:#1F3A5F;position:sticky;top:0;z-index:50;}
+.pp-nav .in{max-width:1180px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;height:72px;}
+.pp-nav .lg{color:#fff;font-weight:800;font-size:22px;letter-spacing:.5px;text-decoration:none;font-family:'Inter',sans-serif;}
+.pp-nav .lg span{color:#2BA84A;}
+.pp-nav nav{display:flex;gap:24px;align-items:center;}
+.pp-nav nav a{color:#dfe6ee;font-size:14.5px;text-decoration:none;font-family:'Inter',sans-serif;}
+.pp-nav nav a:hover{color:#fff;}
+.pp-nav nav a.login{color:#8ff0a9;font-weight:600;}
+.pp-nav .cta{background:#2BA84A;color:#fff;padding:10px 20px;border-radius:2px;font-size:14px;font-weight:600;text-decoration:none;font-family:'Inter',sans-serif;white-space:nowrap;}
+.pp-nav .cta:hover{background:#1F7F37;}
+.pp-foot{background:#16293f;color:#9fb1c6;padding:34px 0;font-size:14px;font-family:'Inter',sans-serif;}
+.pp-foot .in{max-width:1180px;margin:0 auto;padding:0 32px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;align-items:center;}
+.pp-foot a{color:#9fb1c6;text-decoration:none;} .pp-foot a:hover{color:#dfe6ee;}
+@media(max-width:860px){.pp-nav .in{height:auto;padding:12px 18px;flex-wrap:wrap;}.pp-nav nav{order:3;width:100%;gap:16px;font-size:13px;padding-top:10px;overflow-x:auto;}}
+</style>
+<link rel="icon" type="image/png" href="assets/profit-pulse-mark.png">
+</head>
+<body>
+<header class="pp-nav"><div class="in">
+<a class="lg" href="index.html"><img src="assets/profit-pulse-logo-white.png" alt="Profit Pulse" style="height:48px;width:auto;display:block;"></a>
+<nav>
+<a href="about.html">About</a>
+<a href="leadership.html">Leadership</a>
+<a href="difference.html">Why Us</a>
+<a href="services.html">Services</a>
+<a href="training.html">Training</a>
+<a href="insights.html">Insights</a>
+<a href="contact.html">Contact</a>
+<a class="login" href="https://ppos-gate.jasonc-ec7.workers.dev/" target="_blank" rel="noopener">Team Login</a>
+</nav>
+<a class="cta" href="contact.html">Book a Diagnostic</a>
+</div></header>
+  <div class="hero"><div class="wrap">
+    <div class="eyebrow">The Pulse Brief</div>
+    <h1>What moved this week — and what it means for your next decision.</h1>
+    <p>Short, dated notes on decisions, AI, and the consulting market. Published when there’s something worth saying — most weeks. Every item links to its source.</p>
+  </div></div>
+
+  <div class="feed"><div class="wrap">
+
+    <p style="font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--green);font-weight:700;margin:4px 0 10px;">Edition 001 · November 27, 2026</p>
+
+    <a class="card" href="https://www.cpapracticeadvisor.com/2026/06/16/kantata-unveils-ai-superagent-for-professional-services/185223/" target="_blank" rel="noopener">
+      <div class="thumb t1">Nov 27 · The AI arms race</div>
+      <div>
+        <div class="cat">Consulting &amp; AI</div>
+        <h2>Every consulting platform now ships an AI copilot. None of them show the client anything verifiable.</h2>
+        <p>Kantata launched an “AI Superagent” in June; the rest of the professional-services software market followed with copilots of their own. All of it accelerates the consultant — none of it gives the client a way to check what the AI produced. Speed without verification just makes the wrong answer arrive sooner. Source →</p>
+      </div>
+    </a>
+
+    <a class="card" href="https://finance.yahoo.com/sectors/technology/articles/ai-forcing-mckinsey-bcg-bain-093300265.html" target="_blank" rel="noopener">
+      <div class="thumb t2">Nov 27 · The hour is cornered</div>
+      <div>
+        <div class="cat">Consulting Economics</div>
+        <h2>AI is forcing the biggest firms to rethink hourly fees. They built the model; the model is breaking.</h2>
+        <p>When AI compresses months of analysis into days, a fee built on hours has a problem: the better the tools get, the less there is to bill. The industry’s answer so far is to protect the hour. Ours is to price the decision — the thing that was always worth the money. Source →</p>
+      </div>
+    </a>
+
+    <a class="card" href="https://www.pedowitzgroup.com/whats-the-typical-advisory-engagement-length" target="_blank" rel="noopener">
+      <div class="thumb t3">Nov 27 · The real deadline</div>
+      <div>
+        <div class="cat">Decision Timing</div>
+        <h2>Typical engagements still run three to six months. The window to act is usually shorter than that.</h2>
+        <p>Industry sources put the standard advisory engagement at months, with transformations running far longer. The deadline that matters isn’t the firm’s timeline — it’s how long the decision stays available. If the answer lands after the window closes, precision didn’t help. Source →</p>
+      </div>
+    </a>
+
+    <p style="font-size:13.5px;color:var(--muted);max-width:72ch;margin-top:18px;">The Brief is written by Profit Pulse and linked to primary coverage. Nothing here is advice for your specific situation — that takes a diagnostic.</p>
+
+  </div></div>
+
+  <div class="cta"><div class="wrap">
+    <h2>Facing a decision worth getting right?</h2>
+    <p>Book a free 30-minute Decision Diagnostic. No cost, no obligation — often the clarity our clients were looking for.</p>
+    <a class="btn" href="contact.html">Book a Diagnostic →</a>
+  </div></div>
+<footer class="pp-foot"><div class="in">
+<span>PROFIT | PULSE &mdash; Real-time Pulse. Lasting Profit.</span>
+<span><a href="mailto:info@profitpulseinc.com">info@profitpulseinc.com</a> &nbsp;·&nbsp; <a href="https://ppos-gate.jasonc-ec7.workers.dev/" target="_blank" rel="noopener">Team Login</a> &nbsp;·&nbsp; Profit Pulse Inc.</span>
+</div></footer>
+</body>
+</html>
